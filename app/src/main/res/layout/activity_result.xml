@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <ImageView
+        android:id="@+id/iv_co2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/result01"/>
+
+    <TextView
+        android:id="@+id/tv_co2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CO²발생량 : 0.0kg"
+        android:textSize="32sp"
+        android:textColor="#FF333333"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/goodday_medium"/>
+
+    <TextView
+        android:id="@+id/tv_tree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="필요 소나무 : 0.0그루"
+        android:textSize="32sp"
+        android:textColor="#FF333333"
+        android:layout_below="@id/tv_co2"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/goodday_medium"/>
+
+    <Button
+        android:id="@+id/btn_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다시 시작"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/tv_tree"
+        android:layout_alignLeft="@id/iv_co2"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_button_round"
+        app:backgroundTint="@null"
+        android:onClick="btnRestart"/>
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/tv_tree"
+        android:layout_alignRight="@id/iv_co2"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_button_round"
+        app:backgroundTint="@null"
+        android:onClick="btnFinish"/>
+
+</RelativeLayout>
